@@ -6,15 +6,32 @@ Design an application that allows a user to input prices until an appropriate se
 
 
 Psuedocode:
-          SALE - 0.12
-          PRICE
-          QUIT - 0
+          var sale = 0.12;
+          var quit = 0;  
+          var weeks = 7;
 
-          Output: "Enter original price of unsold product:"
-          Input: unsoldProductOrigPrice
+          if weeks != quit
+            var calculateWeeks = 1;
+            var currentPrice = 0;
 
-          while unsoldProductOrigPrice != QUIT:
+            if weeks == 10
+              currentPrice = 0;
+            else
+              var price = 10.00;
+              currentPrice = price - (price * 0.12);
+
+              while calculateWeeks <  weeks
+                currentPrice = currentPrice - (currentPrice * 0.12);
+                calculateWeeks++;
+
+              endwhile
+
+            endelse
+
+          endif
           
-            Output: "Enter weeks of SALE:"
-            Input: weeks
-            PRICE = PRICE - (PRICE * 0.12)
+          if currentPrice == 10
+            message: It's totally free!
+          else
+            message: total price - currentPrice
+          endelse
